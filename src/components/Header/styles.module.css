@@ -1,0 +1,17 @@
+.headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 30;
+    font-weight: 600;
+  }
+  
+  .headerLogo,
+  .headerMenu {
+    cursor: pointer;
+  }
+  
+  .headerLogo:hover,
+  .headerMenu:hover {
+    color: grey;
+  }
