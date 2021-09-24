@@ -1,0 +1,9 @@
+.card {
+    width: 275px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  
+  .title {
+    background-color: grey;
+  }

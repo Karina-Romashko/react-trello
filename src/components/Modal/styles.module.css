@@ -1,0 +1,29 @@
+.bgModal {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .modal {
+    display: flex;
+    justify-content: space-between;
+  }
+  .discription {
+    outline: none;
+    resize: none;
+  }
+  .buttonClose {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .test {
+    width: 20px;
+    height: 20px;
+    background: red;
+  }
+  
