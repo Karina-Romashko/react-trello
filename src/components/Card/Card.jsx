@@ -5,7 +5,7 @@ return(
 <div className={css.card}>
 <div className={css.title}> {title} </div>
 {children}
-text
+
 {footer}
 
 </div>

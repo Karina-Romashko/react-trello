@@ -1,13 +1,10 @@
 .input {
-    height: 30px;
-    width: 200px;
-    color: rgb(0, 0, 0);
-    border: 1px solid black;
+    margin-left: 20px;
+    width: 198px;
+    height: 25px;
+    background-color: #f4f5f7af;
+    word-break: break-all;
     border-radius: 5px;
-    background: rgb(212, 126, 126);
-    align-items: center;
-    text-align: center;
-    padding: 13px 0px;
-    font-weight: 600px;
-    font-size: 16px;
+    border: 1px solid #172b4d;
+    overflow-wrap: break-word;
   }

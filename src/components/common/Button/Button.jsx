@@ -1,8 +1,8 @@
 import css from "./styles.module.css"
 
-export function Button ({onClick, title}){
+export function Button ({click, title, isVisible}){
     return(
-        <button onClick className={css.buttonClick}>
+        <button onClick={click}  className={css.buttonClick}>
             {title}
         </button>
     )

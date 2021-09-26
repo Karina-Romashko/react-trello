@@ -4,14 +4,18 @@
     padding: 20px;
     font-size: 30;
     font-weight: 600;
+    
   }
   
   .headerLogo,
   .headerMenu {
     cursor: pointer;
+    color: rgb(116, 132, 160, 0.85);
+    font-size: 30px;
+    font-weight: 600;
   }
   
   .headerLogo:hover,
   .headerMenu:hover {
-    color: grey;
+    color: #f4f5f7;
   }
