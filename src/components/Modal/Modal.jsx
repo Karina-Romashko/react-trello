@@ -14,7 +14,7 @@ export class Modal extends React.Component{
         return(
             <div className={css.bgModal}>
                 <div className={css.modal}>
-                    <Input title="CardName"></Input>
+                    <Input ></Input>
                    <div>{children}</div> 
                 </div>
                 <div className={css.buttonClose } onClick={onClose}>x</div>

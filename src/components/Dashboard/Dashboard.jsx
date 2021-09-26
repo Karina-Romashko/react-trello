@@ -9,13 +9,22 @@ export class Dashboard extends React.Component {
       value: "",
       isEdit: true,
       tasks: [
-        { text: "text1", id: 1 },
-        { text: "text2", id: 2 }
+        { text: "task1", id: 1 },
+        { text: "task2", id: 2 }
       ]
     };
-  changeValue =(event) =>{
-    this.setState({value:event.target.value})
-  }
+
+ buttonAddClick = ()=>{
+    this.setState((prev)=>({
+    tasks:[
+        ...prev.tasks,
+        {text: prev.value, id: prev.tasks.length + 1}
+    ],
+    value:""
+}))
+ }
+ 
+
     render() {
       return (
         <div className={css.wrapper}>
@@ -23,12 +32,24 @@ export class Dashboard extends React.Component {
             title="todo"
             footer={
               <div>
-                <Button title="Добавить" />
-                <Button title="Отмена" />
+                <Button click={this.buttonAddClick} title="Добавить" />
+                <Button  title="Отмена" />
               </div>
             }
           >
-            <input value={this.state.value} onChange={this.changeValue}/>
+              <div>
+                  <ul className={css.list}>
+                      {this.state.tasks
+                      .map((item) => {
+                        return(
+                            <li className={css.listItem} key={item.id}>{item.text}</li>
+                        )
+                      }
+                      )}
+                  </ul>
+                  <Input value={this.state.value} onChange={(event) => this.setState({value:event.target.value})}/>
+              </div>
+            
           </Card>
           <Card title="in process" />
           <Card title="done" />
