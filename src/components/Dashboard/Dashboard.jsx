@@ -51,7 +51,7 @@ export class Dashboard extends React.Component {
               </div>
             
           </Card>
-          <Card title="in process" />
+          <Card title="in progress" />
           <Card title="done" />
         </div>
       );

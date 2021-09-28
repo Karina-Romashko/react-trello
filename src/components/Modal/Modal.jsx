@@ -14,10 +14,13 @@ export class Modal extends React.Component{
         return(
             <div className={css.bgModal}>
                 <div className={css.modal}>
-                    <Input ></Input>
-                   <div>{children}</div> 
+                    
+                   <div>
+                       <div className={css.buttonClose } onClick={onClose}>x</div>
+                       {children}</div> 
+                  
                 </div>
-                <div className={css.buttonClose } onClick={onClose}>x</div>
+                
             </div>
         )
     }
