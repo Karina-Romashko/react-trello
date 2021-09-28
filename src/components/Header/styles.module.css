@@ -15,7 +15,16 @@
     font-weight: 600;
   }
   
-  .headerLogo:hover,
-  .headerMenu:hover {
+  .headerLogo:hover {
     color: #f4f5f7;
+  }
+  .headerMenuList{
+    list-style-type: none;
+    padding: 7px 19px 19px 19px;
+    margin: 0px;
+   
+  }
+  .headerMenuItem button{
+    margin: 0px;
+    min-width: 176px;
   }
