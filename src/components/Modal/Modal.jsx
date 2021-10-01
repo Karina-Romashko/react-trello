@@ -1,13 +1,13 @@
 import css from "./styles.module.css"
-import {Button} from "../common/Button"
-import {Input} from "../common/Input"
+import {Button} from "components/common/Button"
+import {Input} from "components/common/Input"
 import React from "react"
  
 
 export class Modal extends React.Component{
 
     render(){
-        const {isVisible, onClose, children } = this.props
+        const {isVisible, onClose, children, title } = this.props
         if (!isVisible){
             return null
         }
@@ -16,7 +16,11 @@ export class Modal extends React.Component{
                 <div className={css.modal}>
                     
                    <div>
-                       <div className={css.buttonClose } onClick={onClose}>x</div>
+                       <div className={css.modalTitle} >
+                           <span className={css.modalTitleText}>{title}</span>
+                           <div className={css.buttonClose } onClick={onClose}>x</div>
+                       </div>
+                       
                        {children}</div> 
                   
                 </div>

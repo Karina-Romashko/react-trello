@@ -1,7 +1,7 @@
 import css from "./styles.module.css"
-import {Modal} from "../Modal"
+import {Modal} from "components/Modal"
 import React from "react"
-import { Button } from "../common/Button";
+import { Button } from "components/common/Button";
 
 export class Header extends React.Component {
     state = {
@@ -16,6 +16,7 @@ export class Header extends React.Component {
             <Modal
               isVisible={this.state.test}
               onClose={() => this.setState({ test: false })}
+              title= "Очистить список"
             >
               
               <ul className={css.headerMenuList} >
