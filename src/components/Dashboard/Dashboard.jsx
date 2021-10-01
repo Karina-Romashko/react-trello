@@ -1,13 +1,13 @@
 import css from "./styles.module.css"
-import { Card } from "../Card"
-import {Button} from "../common/Button"
-import {Input } from "../common/Input"
+import { Card } from "components/Card"
+import {Button} from "components/common/Button"
+import {Input } from "components/common/Input"
 import React from "react"
 
 export class Dashboard extends React.Component {
     state = {
       value: "",
-      isEdit: true,
+      isEdit: false,
       tasks: [
         { text: "task1", id: 1 },
         { text: "task2", id: 2 }
@@ -15,15 +15,24 @@ export class Dashboard extends React.Component {
     };
 
  buttonAddClick = ()=>{
-    this.setState((prev)=>({
+   if(this.state.isEdit){
+this.setState((prev)=>({
+      isEdit:true,
     tasks:[
         ...prev.tasks,
         {text: prev.value, id: prev.tasks.length + 1}
     ],
     value:""
 }))
+   } else {
+     this.setState({isEdit:true})
+   }
+
+    
  }
- 
+ buttonCloseClick = ()=>{
+  this.setState({isEdit:false})
+ }
 
     render() {
       return (
@@ -33,7 +42,7 @@ export class Dashboard extends React.Component {
             footer={
               <div>
                 <Button click={this.buttonAddClick} title="Добавить" />
-                <Button  title="Отмена" />
+                <Button click={this.buttonCloseClick} title="Отмена" />
               </div>
             }
           >
@@ -47,7 +56,8 @@ export class Dashboard extends React.Component {
                       }
                       )}
                   </ul>
-                  <Input value={this.state.value} onChange={(event) => this.setState({value:event.target.value})}/>
+                  {this.state.isEdit && <Input  value={this.state.value}  onChange={(event) => this.setState({value:event.target.value})}/>}
+                  
               </div>
             
           </Card>
