@@ -1,0 +1,41 @@
+.homepage{
+    margin:auto;
+    top: 80%;
+    /* position: absolute; */
+}
+.hometitle{
+    color: rgba(255, 255, 255, 0.726);
+   text-align: center;
+    font-size: 80px;
+    margin-bottom: 125px;
+}
+
+.homemenu{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left:0px ;
+    
+}
+.menuitem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 80px;
+    border-radius: 25px;
+    width: 260px;
+     background-color: #f4f5f7b6;
+    
+}
+
+.menuitem a{
+    color: #172b4d;
+    text-decoration: none;
+    font-size: 35px;
+    
+}
+.menuitem a:hover{
+    font-size: 32px;
+    font-weight: 550;
+    text-decoration: underline 3px solid #172b4d;
+}
