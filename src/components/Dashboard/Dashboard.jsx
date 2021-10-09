@@ -3,6 +3,7 @@ import { Card } from "components/Card"
 import {Button} from "components/common/Button"
 import {Input } from "components/common/Input"
 import React from "react"
+import { LoginPage } from "components/LoginPage"
 
 export class Dashboard extends React.Component {
     state = {
@@ -63,7 +64,9 @@ this.setState((prev)=>({
           </Card>
           <Card title="in progress" />
           <Card title="done" />
+         
         </div>
+        
       );
     }
   }
