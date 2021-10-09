@@ -12,7 +12,7 @@ export class RegisterPage extends React.Component{
                 <form action="">
                     <Input placeholder="Login" name='login'  />
                     <Input placeholder="Password" name='password'  type='password' />
-                    <Input placeholder="Repeat password" name='password'  type='password' />
+                    <Input placeholder="Confirm password" name='password'  type='password' />
                     <Button title="Register"  />
                 </form>
                

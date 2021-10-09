@@ -14,13 +14,13 @@ ReactDOM.render(
     <Route path="/loginpage" >
     <LoginPage/>,
     </Route>
-    <Route path="/homepage">
-      <HomePage/>,
-    </Route>
+    
     <Route path="/registerpage">
       <RegisterPage/>,
     </Route>
-
+<Route path="">
+      <HomePage/>,
+    </Route>
   </Switch>
 </Router>,
 

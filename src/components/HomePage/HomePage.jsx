@@ -8,9 +8,9 @@ render(){
             <p className={css.hometitle}>TRELLO</p>
            <div className= {css.homepage}>
             <ul className={css.homemenu}>
-                <li className={css.menuitem} ><Link to="/mainpage"> Main page </Link></li>
-                <li className={css.menuitem}><Link to="/loginpage"> Login page </Link></li>
-                <li className={css.menuitem}><Link to="/registerpage"> Register page </Link></li>
+                <li className={css.menuitem} ><Link to="./mainpage"> Main page </Link></li>
+                <li className={css.menuitem}><Link to="./loginpage"> Login page </Link></li>
+                <li className={css.menuitem}><Link to="./registerpage"> Register page </Link></li>
             </ul>
         </div> 
         </div>
