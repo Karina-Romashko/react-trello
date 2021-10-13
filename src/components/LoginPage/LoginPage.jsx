@@ -10,7 +10,8 @@ export class LoginPage extends React.Component{
     state = {
         values: {login:"", password:""},
         errors: {login:"", password:""},
-        isAuth: true,
+        isAuth: false,
+        
     }
     handler = ({ target }) => {
         this.setState((prevState) => ({
@@ -23,7 +24,7 @@ export class LoginPage extends React.Component{
    
     signIn = ({target}) => {
         if (this.state.values.login ==='Vika' && this.state.values.password==='Vik' ){
-           this.setState({isAuth:true}) 
+            this.setState({isAuth:true}) 
          alert('success')
                    
         }else if (this.state.values.login !=='Vika' && this.state.values.password !=='Vik'){
@@ -42,7 +43,7 @@ export class LoginPage extends React.Component{
                 <form action="">
                     <Input placeholder="Login" name='login' onChange={this.handler} className={css.loginInput} />
                     <Input placeholder="Password" name='password' onChange={this.handler} type='password' className={css.loginInput}/>
-                    <Button title="Login" click={this.signIn} />
+                    <Button title="Login" click={this.signIn } />  
                 </form>
                
             </div>
